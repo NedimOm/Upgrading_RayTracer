@@ -1,0 +1,15 @@
+body{
+    background-color:gainsboro;
+  }
+  #controls {
+    margin-bottom: 20px;
+  }
+  .slider-container, .color-container, .p-container {
+    margin-bottom: 15px;
+  }
+  label {
+    margin-right: 10px;
+  }
+  .slider {
+    width: 100%;
+  }

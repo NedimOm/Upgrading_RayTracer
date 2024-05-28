@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MyRayTracer</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container row justify-content-center mt-2">        
+      <div class="col-sm-6">
+        <div class="mb-5">
+          <h1 >Collecting Spheres</h1>
+          <h6>Game made using raytracer</h6>
+        </div>
+        <div id="controls" class="form-group">
+          <p>Settings: </p>
+          <div class="slider-container">
+            <label for="ambientLightIntensity">Ambient Light Intensity (0.0-1.0):</label>
+            <input type="range" id="ambientLightIntensity" min="0" max="1" step="0.01" value="0.2">
+          </div>
+          <div class="color-container">
+            <label for="ambientLightColor">Ambient Light Color:</label>
+            <input type="color" id="ambientLightColor" class="color-picker" value="#ffffff">
+          </div>
+          <div class="slider-container">
+            <label for="pointLightIntensity">Point Light Intensity (0.0-1.0):</label>
+            <input type="range" id="pointLightIntensity" min="0" max="1" step="0.01" value="0.6">
+          </div>
+          <div class="color-container">
+            <label for="pointLightColor">Point Light Color:</label>
+            <input type="color" id="pointLightColor" class="color-picker" value="#ffffff">
+          </div>
+          <div class="slider-container">
+            <label for="directionalLightIntensity">Directional Light Intensity (0.0-1.0):</label>
+            <input type="range" id="directionalLightIntensity" min="0" max="1" step="0.01" value="0.6">
+          </div>
+          <div class="color-container">
+            <label for="directionalLightColor">Directional Light Color:</label>
+            <input type="color" id="directionalLightColor" class="color-picker" value="#ffffff">
+          </div>
+          <div class="slider-container">
+            <label for="reflectionDepth">Reflection Depth (0-3):</label>
+            <input type="range" id="reflectionDepth" min="0" max="3" step="1" value="3">
+          </div>
+          <div class="p-container">
+            <p id="sphereCount">Spheres collected : 0</p>
+          </div>
+          <div class="p-container">
+            <p id="highscore">Highscore : 0</p>
+          </div>
+          <div class="mt-1">
+            <button id="startGame" class="btn btn-info">Start game</button>
+            <button id="addSphereButton" class="btn btn-success">Add random sphere</button>
+            <button id="removeSphereButton" class="btn btn-danger">Remove last sphere</button>
+            <button id="resetButton" class="btn btn-primary">Reset</button>
+          </div>
+        </div>
+      </div>   
+      <div class="col-sm-6 mt-3">
+        <canvas height="600" width="600" id="canvas" style="border: 1px solid grey;"></canvas>
+      </div>
+    </div>  
+    <script src="myraytracer.js"></script>
+    <script src="myadditions.js"></script>
+</body>
+</html>
